@@ -17,6 +17,9 @@ const tailwindCssConfig: Config = {
       fontFamily: {
         sans: ["var(--font-jost)", ...defaultTheme.fontFamily.sans],
       },
+      transitionDuration: {
+        DEFAULT: "300ms",
+      },
     },
   },
 };
