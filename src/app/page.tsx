@@ -20,32 +20,24 @@ const HomePage = () => (
         <ul className="mt-8 flex items-center gap-4">
           <li>
             <Link
-              className={link({ external: true })}
+              className={link()}
               href={`mailto:${environment.NEXT_PUBLIC_EMAIL_ADDRESS}`}
               target="_blank"
             >
               Email
-              <ChevronDiagonalIcon className="h-4 w-4" />
+              <ChevronDiagonalIcon link />
             </Link>
           </li>
           <li>
-            <Link
-              className={link({ external: true })}
-              href="/github"
-              target="_blank"
-            >
+            <Link className={link()} href="/github" target="_blank">
               GitHub
-              <ChevronDiagonalIcon className="h-4 w-4" />
+              <ChevronDiagonalIcon link />
             </Link>
           </li>
           <li>
-            <Link
-              className={link({ external: true })}
-              href="/linkedin"
-              target="_blank"
-            >
+            <Link className={link()} href="/linkedin" target="_blank">
               LinkedIn
-              <ChevronDiagonalIcon className="h-4 w-4" />
+              <ChevronDiagonalIcon link />
             </Link>
           </li>
         </ul>
@@ -93,12 +85,16 @@ const HomePage = () => (
         </ul>
         <p>Unfortunately the founders decided to dissolve Wenanty Group.</p>
         <hr />
-        <h3>NASA Space Apps Challenge</h3>
+        <h3>
+          <Link href="https://spaceappschallenge.org/" target="_blank">
+            NASA Space Apps Challenge
+          </Link>
+        </h3>
         <span className="text-sm text-gray-500">Team 500 ISS, 2022</span>
         <p>
           I led the team that in 28 hours managed to build a 3D satellite
           tracking web application called{" "}
-          <Link href="https://spacetag.skni.edu.pl/" target="_blank">
+          <Link href="https://spacetag.mata.li/" target="_blank">
             SpaceTag
           </Link>
           , which was awarded by{" "}
@@ -108,14 +104,22 @@ const HomePage = () => (
           – one of the world&apos;s leading satellite owners and operators.
         </p>
         <hr />
-        <h3>SKNI Kod</h3>
+        <h3>
+          <Link href="https://kod.prz.edu.pl/" target="_blank">
+            SKNI Kod
+          </Link>
+        </h3>
         <span className="text-sm text-gray-500">Member, 2021–present</span>
         <p>
           I am an active member contributing to group&apos;s open-source web
           projects and a mentor of younger colleagues.
         </p>
         <hr />
-        <h3>Ideo</h3>
+        <h3>
+          <Link href="https://ideo.pl/" target="_blank">
+            Ideo
+          </Link>
+        </h3>
         <span className="text-sm text-gray-500">
           Junior Web Developer, 2021–2022
         </span>
@@ -125,22 +129,26 @@ const HomePage = () => (
           operator&apos;s website as well as other company’s internal projects.
         </p>
         <hr />
-        <h3>Rzeszów University of Technology</h3>
+        <h3>
+          <Link href="https://prz.edu.pl/" target="_blank">
+            Rzeszów University of Technology
+          </Link>
+        </h3>
         <span className="text-sm text-gray-500">2019–2023</span>
         <p>
           Bachelor of Engineering in Computer Engineering, speciality
           Information Technology in Business
         </p>
         <hr />
-        <h3>CINEL</h3>
+        <h3>
+          <Link href="https://cinel.pt/" target="_blank">
+            CINEL
+          </Link>
+        </h3>
         <span className="text-sm text-gray-500">Trainee, 2018</span>
         <p>
           I was a trainee designing and implementing websites during internship
-          abroad at the{" "}
-          <Link href="https://cinel.pt/" target="_blank">
-            CINEL
-          </Link>{" "}
-          training centre in Lisbon, Portugal as part of the{" "}
+          abroad at the CINEL training centre in Lisbon, Portugal as part of the{" "}
           <Link href="https://power.gov.pl/" target="_blank">
             PO WER
           </Link>{" "}
