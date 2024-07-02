@@ -4,25 +4,25 @@ import type { IconProps } from "@/types";
 
 import { cva } from "@/utilities/classname";
 
-export type ChevronDiagonalIconProps = IconProps &
-  VariantProps<typeof chevronDiagonalIcon>;
+export type ArrowDiagonalIconProps = IconProps &
+  VariantProps<typeof arrowDiagonalIcon>;
 
-const chevronDiagonalIcon = cva({
+const arrowDiagonalIcon = cva({
   variants: {
     link: {
-      true: "mb-0.5 ml-1 inline-flex h-4 w-4",
+      true: "mb-0.5 ml-1 inline-flex size-[1em]",
     },
   },
 });
 
-export const ChevronDiagonalIcon = ({
+export const ArrowDiagonalIcon = ({
   className,
   fill = "currentColor",
   link,
   ...props
-}: ChevronDiagonalIconProps) => (
+}: ArrowDiagonalIconProps) => (
   <svg
-    className={chevronDiagonalIcon({ className, link })}
+    className={arrowDiagonalIcon({ className, link })}
     fill={fill}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

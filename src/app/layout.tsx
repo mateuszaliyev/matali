@@ -7,9 +7,11 @@ import { GradientCyanSkyBlue } from "@/components/gradient/cyan-sky-blue";
 
 import { environment } from "@/environment.mjs";
 
-import { cx } from "@/utilities/classname";
+import { container, cx, link } from "@/utilities/classname";
 
 import "./style.css";
+
+import { ScrollToTopButton } from "@/components/button/scroll-to-top";
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -77,6 +79,18 @@ const RootLayout = ({ children }: RootLayoutProps) => (
   <html className={cx("scroll-smooth", jost.variable)} lang="en">
     <body className="bg-white text-gray-500 antialiased selection:bg-sky-500 selection:text-white">
       {children}
+      <footer>
+        <div
+          className={container({
+            className: "mt-32 flex items-center justify-between pb-16 text-sm",
+          })}
+        >
+          <p>&copy; {new Date().getFullYear()} Mateusz Aliyev</p>
+          <ScrollToTopButton className={link()}>
+            Scroll to Top
+          </ScrollToTopButton>
+        </div>
+      </footer>
       <svg
         aria-hidden
         className="h-0 w-0"
