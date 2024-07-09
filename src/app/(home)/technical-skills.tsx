@@ -106,6 +106,8 @@ export const HomePageTechnicalSkills = () => (
           <Technology name="GitHub Projects" />
           <Technology name="Google Workspace" />
           <Technology name="Microsoft Teams" />
+          <Technology name="Redmine" />
+          <Technology name="Trello" />
         </TechnologyCategory>
       </TechnologyList>
     </div>

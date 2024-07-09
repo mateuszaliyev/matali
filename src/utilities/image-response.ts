@@ -21,5 +21,6 @@ export const getImageResponseFont = async () => {
   const response = await fetch(
     new URL("../assets/fonts/jost-regular.ttf", import.meta.url),
   );
-  return await response.arrayBuffer();
+
+  return response.arrayBuffer();
 };

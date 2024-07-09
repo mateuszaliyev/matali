@@ -12,6 +12,12 @@ export type HomePageHeaderProps = Omit<
   "children"
 >;
 
+const HOME_PAGE_HEADER_LINKS: { name: string; url: string }[] = [
+  { name: "Email", url: `mailto:${environment.NEXT_PUBLIC_EMAIL_ADDRESS}` },
+  { name: "GitHub", url: "/github" },
+  { name: "LinkedIn", url: "/linkedin" },
+];
+
 export const HomePageHeader = (props: HomePageHeaderProps) => (
   <header {...props}>
     <div className={container()}>
@@ -24,28 +30,14 @@ export const HomePageHeader = (props: HomePageHeaderProps) => (
         applications users love.
       </p>
       <ul className="mt-8 flex items-center gap-4">
-        <li>
-          <Link
-            className={link()}
-            href={`mailto:${environment.NEXT_PUBLIC_EMAIL_ADDRESS}`}
-            target="_blank"
-          >
-            Email
-            <ArrowDiagonalIcon link />
-          </Link>
-        </li>
-        <li>
-          <Link className={link()} href="/github" target="_blank">
-            GitHub
-            <ArrowDiagonalIcon link />
-          </Link>
-        </li>
-        <li>
-          <Link className={link()} href="/linkedin" target="_blank">
-            LinkedIn
-            <ArrowDiagonalIcon link />
-          </Link>
-        </li>
+        {HOME_PAGE_HEADER_LINKS.map(({ name, url }) => (
+          <li key={name}>
+            <Link className={link()} href={url} target="_blank">
+              {name}
+              <ArrowDiagonalIcon link />
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   </header>
