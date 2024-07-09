@@ -39,6 +39,7 @@ export const TimelineEntry = ({
   url,
 }: TimelineEntryProps) => (
   <>
+    <hr className="first-of-type:hidden" />
     <h3>
       {url ? (
         <Link href={url} target="_blank">

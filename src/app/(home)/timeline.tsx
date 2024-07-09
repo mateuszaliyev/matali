@@ -70,7 +70,6 @@ export const HomePageTimeline = () => (
         </TechnologyList>
       </TechnologyListCollapsible>
     </TimelineEntry>
-    <hr />
     <TimelineEntry
       from={2023}
       position="Fullstack Developer"
@@ -351,6 +350,7 @@ export const HomePageTimeline = () => (
             <Technology name="Figma" />
             <Technology name="LOGITO" />
             <Technology name="Microsoft Teams" />
+            <Technology name="Redmine" />
           </TechnologyCategory>
         </TechnologyList>
       </TechnologyListCollapsible>
@@ -409,6 +409,7 @@ export const HomePageTimeline = () => (
           </TechnologyCategory>
           <TechnologyCategory name="Collaboration">
             <Technology name="Microsoft Teams" />
+            <Technology name="Trello" />
           </TechnologyCategory>
         </TechnologyList>
       </TechnologyListCollapsible>

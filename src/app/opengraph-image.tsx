@@ -2,9 +2,6 @@ import { OpenGraphImage } from "@/components/image/open-graph";
 
 import { createImageResponse } from "@/utilities/image-response";
 
-export const alt =
-  "I'm a frontend developer from Rzeszów, Poland, on a mission to build applications users love.";
-
 export const contentType = "image/png";
 export const runtime = "edge";
 export const size = {
