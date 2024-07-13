@@ -7,6 +7,14 @@ import {
 } from "@/components/technology";
 import { Timeline, TimelineEntry } from "@/components/timeline";
 
+import { environment } from "@/environment.mjs";
+
+const getSpaceTagUrl = () => {
+  const url = new URL(environment.NEXT_PUBLIC_BASE_URL);
+  url.hostname = ["spacetag", url.hostname.split(".").slice(-2)].join(".");
+  return url;
+};
+
 export const HomePageTimeline = () => (
   <Timeline>
     <TimelineEntry from={2021} title="Freelancing">
@@ -168,7 +176,7 @@ export const HomePageTimeline = () => (
       <p>
         I led the team that in 28 hours managed to build a 3D satellite tracking
         web application called{" "}
-        <Link href="https://spacetag.mata.li/" target="_blank">
+        <Link href={getSpaceTagUrl()} target="_blank">
           SpaceTag
         </Link>
         , which was awarded by{" "}
