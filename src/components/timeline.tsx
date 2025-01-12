@@ -24,7 +24,6 @@ export const Timeline = ({ children }: TimelineProps) => (
         className: prose({ className: "prose-h3:mb-0" }),
       })}
     >
-      <h2>My timeline</h2>
       {children}
     </div>
   </section>

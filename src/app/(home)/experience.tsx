@@ -7,24 +7,23 @@ import {
 } from "@/components/technology";
 import { Timeline, TimelineEntry } from "@/components/timeline";
 
-import { environment } from "@/environment.mjs";
-
-const getSpaceTagUrl = () => {
-  const url = new URL(environment.NEXT_PUBLIC_BASE_URL);
-  url.hostname = ["spacetag", url.hostname.split(".").slice(-2)].join(".");
-  return url;
-};
-
-export const HomePageTimeline = () => (
+export const Experience = () => (
   <Timeline>
-    <TimelineEntry from={2021} title="Freelancing">
+    <h2>Experience</h2>
+    <TimelineEntry
+      from={2024}
+      position="Frontend Developer"
+      title="Web Leaders"
+      url="https://webleaders.pl/"
+    >
       <p>
-        I built a new website of{" "}
-        <Link href="https://fabryka-kreatywnosci.pl/" target="_blank">
-          Fabryka Kreatywności
-        </Link>{" "}
-        – an event agency for children. The company has opened many new branches
-        since. I am actively working on new features and maintaining the website
+        I took over the frontend development of{" "}
+        <Link href="https://takelink.pl/" target="_blank">
+          TakeLink
+        </Link>
+        , a platform offering sponsored articles for agencies, right after its
+        inception and successfully delivered it to completion. I am currently
+        working on a new website for anime and manga fans.
       </p>
       <TechnologyListCollapsible>
         <TechnologyList>
@@ -32,7 +31,6 @@ export const HomePageTimeline = () => (
             <Technology name="HTML" />
             <Technology name="CSS" />
             <Technology name="JavaScript" />
-            <Technology name="Markdown" />
             <Technology name="TypeScript" />
           </TechnologyCategory>
           <TechnologyCategory name="Runtimes">
@@ -40,40 +38,50 @@ export const HomePageTimeline = () => (
           </TechnologyCategory>
           <TechnologyCategory name="Frameworks">
             <Technology name="React" />
-            <Technology name="Next.js">Pages & App Router</Technology>
+            <Technology name="Next.js">App Router</Technology>
+            <Technology name="Hono" />
           </TechnologyCategory>
           <TechnologyCategory name="Styling">
             <Technology name="Tailwind CSS" />
             <Technology name="cva" />
-            <Technology name="Stitches" />
           </TechnologyCategory>
           <TechnologyCategory name="UI libraries">
             <Technology name="Radix UI" />
-            <Technology name="Headless UI" />
+            <Technology name="React Aria Components" />
           </TechnologyCategory>
           <TechnologyCategory name="State management">
             <Technology name="React Hook Form" />
+            <Technology name="Zustand" />
           </TechnologyCategory>
           <TechnologyCategory name="Libraries">
+            <Technology name="Auth.js">NextAuth.js</Technology>
+            <Technology name="CKEditor" />
+            <Technology name="Drizzle ORM" />
+            <Technology name="Paraglide" />
             <Technology name="Zod" />
-            <Technology name="Nodemailer" />
           </TechnologyCategory>
-          <TechnologyCategory name="CMS">
-            <Technology name="Contentful" />
+          <TechnologyCategory name="Databases">
+            <Technology name="MySQL" />
+            <Technology name="Redis" />
+            <Technology name="SQLite" />
           </TechnologyCategory>
           <TechnologyCategory name="Version control">
             <Technology name="Git" />
             <Technology name="GitHub" />
           </TechnologyCategory>
-          <TechnologyCategory name="CI/CD">
-            <Technology name="Vercel" />
+          <TechnologyCategory name="Testing">
+            <Technology name="Playwright" />
           </TechnologyCategory>
           <TechnologyCategory name="Tools">
+            <Technology name="Docker" />
             <Technology name="ESLint" />
             <Technology name="Prettier" />
           </TechnologyCategory>
           <TechnologyCategory name="Collaboration">
+            <Technology name="Confluence" />
             <Technology name="Figma" />
+            <Technology name="Telegram" />
+            <Technology name="Trello" />
           </TechnologyCategory>
         </TechnologyList>
       </TechnologyListCollapsible>
@@ -167,152 +175,6 @@ export const HomePageTimeline = () => (
       </TechnologyListCollapsible>
     </TimelineEntry>
     <TimelineEntry
-      from={2022}
-      position="Team 500 ISS"
-      title="NASA Space Apps Challenge"
-      to={2022}
-      url="https://spaceappschallenge.org/"
-    >
-      <p>
-        I led the team that in 28 hours managed to build a 3D satellite tracking
-        web application called{" "}
-        <Link href={getSpaceTagUrl()} target="_blank">
-          SpaceTag
-        </Link>
-        , which was awarded by{" "}
-        <Link href="https://ses.com/" target="_blank">
-          SES
-        </Link>{" "}
-        – one of the world&apos;s leading satellite owners and operators.
-      </p>
-      <TechnologyListCollapsible>
-        <TechnologyList>
-          <TechnologyCategory name="Languages">
-            <Technology name="HTML" />
-            <Technology name="CSS" />
-            <Technology name="JavaScript" />
-            <Technology name="TypeScript" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Runtimes">
-            <Technology name="Node.js" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Frameworks">
-            <Technology name="React" />
-            <Technology name="Next.js">Pages Router</Technology>
-          </TechnologyCategory>
-          <TechnologyCategory name="Styling">
-            <Technology name="Tailwind CSS" />
-          </TechnologyCategory>
-          <TechnologyCategory name="UI libraries">
-            <Technology name="Headless UI" />
-          </TechnologyCategory>
-          <TechnologyCategory name="State management">
-            <Technology name="Zustand" />
-            <Technology name="React Hook Form" />
-            <Technology name="TanStack Query">React Query</Technology>
-          </TechnologyCategory>
-          <TechnologyCategory name="Libraries">
-            <Technology name="Three.js" />
-            <Technology name="React Three Fiber" />
-            <Technology name="tRPC" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Version control">
-            <Technology name="Git" />
-            <Technology name="GitHub" />
-          </TechnologyCategory>
-          <TechnologyCategory name="CI/CD">
-            <Technology name="Vercel" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Tools">
-            <Technology name="ESLint" />
-            <Technology name="Prettier" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Collaboration">
-            <Technology name="Discord" />
-          </TechnologyCategory>
-        </TechnologyList>
-      </TechnologyListCollapsible>
-    </TimelineEntry>
-    <TimelineEntry
-      from={2021}
-      position="Member"
-      title="SKNI Kod"
-      url="https://kod.prz.edu.pl/"
-    >
-      <p>
-        I am an active member contributing to group&apos;s open-source web
-        projects and a mentor of younger colleagues.
-      </p>
-      <TechnologyListCollapsible>
-        <TechnologyList>
-          <TechnologyCategory name="Languages">
-            <Technology name="HTML" />
-            <Technology name="CSS" />
-            <Technology name="Sass">SCSS</Technology>
-            <Technology name="JavaScript" />
-            <Technology name="Markdown" />
-            <Technology name="TypeScript" />
-            <Technology name="SQL" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Runtimes">
-            <Technology name="Node.js" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Frameworks">
-            <Technology name="React" />
-            <Technology name="Next.js">App & Pages Router</Technology>
-            <Technology name="Vue.js" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Styling">
-            <Technology name="Tailwind CSS" />
-            <Technology name="cva" />
-          </TechnologyCategory>
-          <TechnologyCategory name="UI libraries">
-            <Technology name="Headless UI" />
-            <Technology name="Radix UI" />
-          </TechnologyCategory>
-          <TechnologyCategory name="State management">
-            <Technology name="Zustand" />
-            <Technology name="React Hook Form" />
-            <Technology name="TanStack Query">React Query</Technology>
-          </TechnologyCategory>
-          <TechnologyCategory name="Libraries">
-            <Technology name="Three.js" />
-            <Technology name="React Three Fiber" />
-            <Technology name="date-fns" />
-            <Technology name="Axios" />
-            <Technology name="Zod" />
-            <Technology name="tRPC" />
-            <Technology name="Auth.js">NextAuth.js</Technology>
-            <Technology name="Drizzle ORM" />
-            <Technology name="Prisma" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Databases">
-            <Technology name="MySQL" />
-            <Technology name="PostgreSQL" />
-            <Technology name="PlanetScale" />
-            <Technology name="Neon" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Version control">
-            <Technology name="Git" />
-            <Technology name="GitHub" />
-            <Technology name="GitLab" />
-          </TechnologyCategory>
-          <TechnologyCategory name="CI/CD">
-            <Technology name="Vercel" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Tools">
-            <Technology name="Docker" />
-            <Technology name="ESLint" />
-            <Technology name="Prettier" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Collaboration">
-            <Technology name="Discord" />
-            <Technology name="GitHub Projects" />
-          </TechnologyCategory>
-        </TechnologyList>
-      </TechnologyListCollapsible>
-    </TimelineEntry>
-    <TimelineEntry
       from={2021}
       position="Junior Web Developer"
       title="Ideo"
@@ -363,43 +225,49 @@ export const HomePageTimeline = () => (
         </TechnologyList>
       </TechnologyListCollapsible>
     </TimelineEntry>
-    <TimelineEntry
-      from={2019}
-      title="Rzeszów University of Technology"
-      to={2023}
-      url="https://prz.edu.pl/"
-    >
+    <TimelineEntry from={2021} title="Freelancing" to={2025}>
       <p>
-        Bachelor of Engineering in Computer Engineering, speciality Information
-        Technology in Business
+        I built a new website of{" "}
+        <Link href="https://fabryka-kreatywnosci.pl/" target="_blank">
+          Fabryka Kreatywności
+        </Link>{" "}
+        – an event agency for children. The company has opened many new branches
+        since. I am actively working on new features and maintaining the website
       </p>
-      <TechnologyListCollapsible text="Technologies">
+      <TechnologyListCollapsible>
         <TechnologyList>
           <TechnologyCategory name="Languages">
             <Technology name="HTML" />
             <Technology name="CSS" />
-            <Technology name="Sass">SCSS</Technology>
             <Technology name="JavaScript" />
-            <Technology name="SQL" />
+            <Technology name="Markdown" />
+            <Technology name="TypeScript" />
           </TechnologyCategory>
           <TechnologyCategory name="Runtimes">
             <Technology name="Node.js" />
           </TechnologyCategory>
           <TechnologyCategory name="Frameworks">
             <Technology name="React" />
-            <Technology name="Next.js">Pages Router</Technology>
-            <Technology name="Express" />
+            <Technology name="Next.js">Pages & App Router</Technology>
+          </TechnologyCategory>
+          <TechnologyCategory name="Styling">
+            <Technology name="Tailwind CSS" />
+            <Technology name="cva" />
+            <Technology name="Stitches" />
           </TechnologyCategory>
           <TechnologyCategory name="UI libraries">
-            <Technology name="Material UI" />
+            <Technology name="Radix UI" />
+            <Technology name="Headless UI" />
+          </TechnologyCategory>
+          <TechnologyCategory name="State management">
+            <Technology name="React Hook Form" />
           </TechnologyCategory>
           <TechnologyCategory name="Libraries">
-            <Technology name="date-fns" />
-            <Technology name="i18next" />
-            <Technology name="Lodash" />
+            <Technology name="Zod" />
+            <Technology name="Nodemailer" />
           </TechnologyCategory>
-          <TechnologyCategory name="Databases">
-            <Technology name="PostgreSQL" />
+          <TechnologyCategory name="CMS">
+            <Technology name="Contentful" />
           </TechnologyCategory>
           <TechnologyCategory name="Version control">
             <Technology name="Git" />
@@ -407,17 +275,13 @@ export const HomePageTimeline = () => (
           </TechnologyCategory>
           <TechnologyCategory name="CI/CD">
             <Technology name="Vercel" />
-            <Technology name="Heroku" />
-          </TechnologyCategory>
-          <TechnologyCategory name="Testing">
-            <Technology name="Jest" />
           </TechnologyCategory>
           <TechnologyCategory name="Tools">
+            <Technology name="ESLint" />
             <Technology name="Prettier" />
           </TechnologyCategory>
           <TechnologyCategory name="Collaboration">
-            <Technology name="Microsoft Teams" />
-            <Technology name="Trello" />
+            <Technology name="Figma" />
           </TechnologyCategory>
         </TechnologyList>
       </TechnologyListCollapsible>
