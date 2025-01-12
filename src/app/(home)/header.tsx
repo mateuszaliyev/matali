@@ -26,8 +26,7 @@ export const HomePageHeader = (props: HomePageHeaderProps) => (
       </h1>
       <p className="text-lg text-gray-400">Frontend Developer</p>
       <p className="mt-8 text-balance text-xl">
-        I&apos;m a frontend developer from Poland, on a mission to build
-        applications users love.
+        I&apos;m a software engineer from Poland, with expertise in frontend development.
       </p>
       <ul className="mt-8 flex items-center gap-4">
         {HOME_PAGE_HEADER_LINKS.map(({ name, url }) => (

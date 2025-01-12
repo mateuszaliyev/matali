@@ -1,15 +1,19 @@
 import { container, prose } from "@/utilities/classname";
 
+import { Activities } from "./activities";
+import { Education } from "./education";
+import { Experience } from "./experience";
 import { HomePageHeader } from "./header";
-import { HomePageTechnicalSkills } from "./technical-skills";
-import { HomePageTimeline } from "./timeline";
+import { TechnicalSkills } from "./technical-skills";
 
 const HomePage = () => (
   <>
     <HomePageHeader className="my-32" />
     <main className="my-32 flex flex-col gap-32">
-      <HomePageTimeline />
-      <HomePageTechnicalSkills />
+      <Experience />
+      <Education />
+      <Activities />
+      <TechnicalSkills />
       <section>
         <div
           className={container({

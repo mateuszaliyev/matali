@@ -6,13 +6,9 @@ import {
 
 import { container, prose } from "@/utilities/classname";
 
-export const HomePageTechnicalSkills = () => (
+export const TechnicalSkills = () => (
   <section>
-    <div
-      className={container({
-        className: prose(),
-      })}
-    >
+    <div className={container({ className: prose() })}>
       <h2>My technical skills</h2>
       <TechnologyList className="prose-sm md:prose-base">
         <TechnologyCategory name="Languages">
@@ -33,9 +29,9 @@ export const HomePageTechnicalSkills = () => (
           <Technology name="React" />
           <Technology name="Next.js" />
           <Technology name="Astro" />
-          <Technology name="SolidJS" />
           <Technology name="Vue.js" />
           <Technology name="Express" />
+          <Technology name="Hono" />
         </TechnologyCategory>
         <TechnologyCategory name="Styling">
           <Technology name="Tailwind CSS" />
@@ -43,10 +39,10 @@ export const HomePageTechnicalSkills = () => (
           <Technology name="Stitches" />
           <Technology name="StyleX" />
           <Technology name="styled-components" />
-          <Technology name="vanilla-extract" />
         </TechnologyCategory>
         <TechnologyCategory name="UI libraries">
           <Technology name="Radix UI" />
+          <Technology name="React Aria Components" />
           <Technology name="Headless UI" />
           <Technology name="Material UI" />
         </TechnologyCategory>
@@ -57,9 +53,11 @@ export const HomePageTechnicalSkills = () => (
           <Technology name="TanStack Query">React Query</Technology>
         </TechnologyCategory>
         <TechnologyCategory name="Libraries">
+          <Technology name="CKEditor" />
           <Technology name="date-fns" />
           <Technology name="i18next" />
           <Technology name="Lodash" />
+          <Technology name="Paraglide" />
           <Technology name="Zod" />
           <Technology name="tRPC" />
           <Technology name="Auth.js">NextAuth.js</Technology>
@@ -73,6 +71,7 @@ export const HomePageTechnicalSkills = () => (
         <TechnologyCategory name="Databases">
           <Technology name="MySQL" />
           <Technology name="PostgreSQL" />
+          <Technology name="Redis" />
           <Technology name="SQLite" />
           <Technology name="SQL Server" />
           <Technology name="PlanetScale" />
