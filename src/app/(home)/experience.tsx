@@ -22,8 +22,8 @@ export const Experience = () => (
           TakeLink
         </Link>
         , a platform offering sponsored articles for agencies, right after its
-        inception and successfully delivered it to completion. I am currently
-        working on a new website for anime and manga fans.
+        inception and successfully delivered it to completion. Currently working
+        on a new project.
       </p>
       <TechnologyListCollapsible>
         <TechnologyList>
